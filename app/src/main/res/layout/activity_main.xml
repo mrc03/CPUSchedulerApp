@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:text="ADD PROCESSES DETAILS"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/lin_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview"
+        android:layout_margin="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/pid"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/textview"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="PID"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/burst_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/textview"
+            android:layout_toRightOf="@id/pid"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Burst Time"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/arrival_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/textview"
+            android:layout_toRightOf="@id/burst_time"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Arrival Time"
+            android:inputType="number"/>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/add_processes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lin_lay"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:onClick="onClick"
+        android:text="Add"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_processes"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="SJF"/>
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Round Robin"/>
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="FCFS"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="Submit"/>
+
+</RelativeLayout>
