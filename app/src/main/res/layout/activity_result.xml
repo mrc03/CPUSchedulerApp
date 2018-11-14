@@ -169,7 +169,7 @@
             android:layout_below="@id/act_lin_lay"
             android:layout_gravity="center"
             android:layout_margin="4dp"
-            android:layout_weight="0.8"
+            android:layout_weight="0.81"
             android:ems="10"
             android:text="Average Waiting Time"
             android:textColor="#ff4125"
