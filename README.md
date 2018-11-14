@@ -6,7 +6,7 @@
 */
 
 # CPUSchedulerApp
-A small Android application for the Operating System Assignement. 
+A small Android application for the Operating System Lab Project. 
 
 The application implements a short term scheduler. 
 
