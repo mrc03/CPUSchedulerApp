@@ -11,6 +11,8 @@ public class ResultActivity extends AppCompatActivity {
     private TextView mBurst;
     private TextView mWait;
     private TextView mTurn;
+    private TextView mAvgWait;
+    private TextView mAvgTurn;
 
 
     @Override
@@ -23,6 +25,8 @@ public class ResultActivity extends AppCompatActivity {
         mBurst = findViewById(R.id.result_act_burst_time);
         mWait = findViewById(R.id.result_act_wait_time);
         mTurn = findViewById(R.id.result_act_turn_time);
+        mAvgWait=findViewById(R.id.avg_wait_time);
+        mAvgTurn=findViewById(R.id.avg_turn_time);
 
 
         Bundle extras = getIntent().getExtras();
@@ -37,6 +41,9 @@ public class ResultActivity extends AppCompatActivity {
 
         mAlgo.setText(algo);
 
+        double sum1=0;
+        double sum2=0;
+
         for (int i = 0; i < pids.length; i++) {
             mPid.setText(mPid.getText() + "\n" + pids[i]);
 
@@ -44,7 +51,15 @@ public class ResultActivity extends AppCompatActivity {
             mWait.setText(mWait.getText() + "\n" + wt[i]);
             mTurn.setText(mTurn.getText() + "\n" + tat[i]);
 
+            sum1=sum1+wt[i];
+            sum2=sum2+tat[i];
+
         }
+
+
+
+        mAvgWait.setText(String.valueOf(sum1/n));
+        mAvgTurn.setText(String.valueOf(sum2/n));
 
 
     }
